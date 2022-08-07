@@ -1,0 +1,396 @@
+<!DOCTYPE  html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>黑龙江旅游生活博客网</title>
+		
+		<!-- CSS -->
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="css/social-icons.css" type="text/css" media="screen" />
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/custom.js"></script>
+		<script type="text/javascript" src="js/slider.js"></script>
+		<script src="js/slides.min.jquery.js"></script>
+		<script src="js/quicksand.js"></script>
+		<script type="text/javascript" src="js/superfish.js"></script>
+		<script type="text/javascript" src="js/jquery.poshytip.min.js"></script>
+		<script src="js/jquery.tweet.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
+<style>
+	#Date{
+		width: 200px;
+		height: 20px;
+
+	}
+
+</style>
+		<style>
+			.captcha {
+				padding: 0;
+				width: 300px;
+				border-radius: 8px;
+			}
+			.captcha {
+				width: 320px;
+				padding: 7px 7px 0 7px;
+				background: #ffffff;
+				border-radius: 8px;
+			}
+			.captcha .imgArea {
+				overflow: hidden;
+				z-index: 1;
+				position: relative;
+				width: 100%;
+				height: 163px;
+			}
+			.captcha .missPiece,
+			.captcha .piece {
+				width: inherit;
+				height: inherit;
+				border-radius: 8px;
+			}
+			.captcha .piece {
+				position: absolute;
+			}
+			.slider {
+				width: 100%;
+				height: 65px;
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				position: relative;
+			}
+			.slider	.track {
+				margin-left: 7px;
+				width: 286px;
+				height: 38px;
+				background: #ffde00;
+				border-radius: 25px;
+				font-size: 14px;
+				line-height: 38px;
+				padding-right: 15px;
+				padding-left: 70px;
+			}
+			.slider	.track.pintuTrue {
+				background: #67c23a;
+				color: #ffffff;
+			}
+			.slider	.track.pintuFalse {
+				background: #fc6c4d;
+				color: #ffffff;
+			}
+			.slider	.button {
+				position: absolute;
+				width: 50px;
+				height: 50px;
+				line-height: 48px;
+				background: #ffffff;
+				box-shadow: #b9bdc8 0 0 3px;
+				border-radius: 50%;
+				left: 7px;
+				text-align: center;
+				font-size: 28px;
+				color: #3e5d8b;
+				top: 8px;
+				cursor: pointer;
+			}
+			.slider	.button:hover {
+				color: #2181bd;
+			}
+			.operation {
+				width: 100%;
+				height: 40px;
+			}
+			.operation span {
+				color: #9fa3ac;
+				display: inline-block;
+				width: 40px;
+				font-size: 25px;
+				line-height: 40px;
+				text-align: center;
+			}
+			.operation span:hover {
+				background: #e2e8f5;
+			}
+		</style>
+
+	</head>
+	<body>
+		<div id="headerimgs">
+			<div id="headerimg1" class="headerimg"></div>
+			<div id="headerimg2" class="headerimg"></div>
+		</div>
+		<div id="headernav">
+			<div id="back" class="btn"></div>
+			<div id="next" class="btn"></div>
+		</div>
+		<div id="top-gap"></div>
+		<div class="wrapper">
+			<a href="index.html"><img  id="logo" src="img/log.png" alt="Kroft"></a>
+			<div id="nav-bar-holder">
+				<ul id="nav" class="sf-menu">
+					<li><a href="index.html">主页</a></li>
+					<li><a href="gallery.html">风景</a></li>
+					<li><a href="page.html">社会见闻</a>
+						<ul>
+							<li><a href="page.html">历史</a></li>
+							<li><a href="page-fullwidth.html">文化</a></li>
+						</ul>
+					</li>
+					<li><a href="portfolio.html">野生动物</a></li>
+					<li><a href="blog.html">美食</a></li>
+					<li class="current-menu-item"><a href="contact.html">联系我们</a></li>
+					<li><a href="login.html">登录/注册</a></li>
+					
+				</ul>
+			</div>
+	        <div id="content-wrap">
+	        	<div id="page-wrap">
+					<div class="page-title"><h1>联系我们</h1> <span>提一些建议</span></div>
+					<div id="side-content">
+						<h4>意见箱</h4>
+						<p>在这里可以给我们网站提一些建议，我们会对其进行更改。</p>
+						<h2 class="title-divider">联系表</h2>
+						<script type="text/javascript" src="js/form-validation.js"></script>
+						<form id="contactForm" action="#" method="post">
+							<fieldset>
+								<div>
+									<input name="name"  id="name" type="text" class="form-poshytip" />
+									<label>名字</label>
+								</div>
+								<div>
+									<input name="email"  id="email" type="text" class="form-poshytip" />
+									<label>邮箱</label>
+								</div>
+								<div>
+									<input name="web"  id="web" type="text" class="form-poshytip"/>
+									<label>电话</label>
+								</div>
+								<div>
+									<textarea  name="comments"  id="comments" rows="5" cols="20" class="form-poshytip" ></textarea>
+								</div>
+
+								<p><input type="button" value="发送" name="submit" id="submit" /> <span id="error" class="warning">消息</span></p>
+							</fieldset>
+						</form>
+					</div>
+					<div id="sidebar">
+						<h4>地址</h4>
+						<p>
+							<br/>
+							地址：辽宁省大连市旅顺口区滨海路大连科技学院<br/>
+						    邮政编码：116000<br/>
+							电话 :15331909903,15309824628<br/>
+							<a href="http//www.heilongjiangly.com/">www.heilongjiangly.com</a><br/>
+						</p>
+						<div id="Date">
+						<span id="sp"></span>
+						<script>
+							function show(){
+								var date = new Date();
+								var year = date.getFullYear();
+								var month = date.getMonth()+1;
+								month=month<10?"0"+month:month;
+								var day = date.getDate();
+								day=day<10?"0"+day:day;
+								var week = date.getDay();
+								week ="星期"+"日一二三四五六七".charAt(week);
+								var hours = date.getHours();
+								hours=hours<10?"0"+hours:hours;
+								var minute = date.getMinutes();
+								minute=minute<10?"0"+minute:minute;
+								var second = date.getSeconds();
+								second=second<10?"0"+second:second;
+								var result = year+"-"+month+"-"+day+" "+week+" "+hours+":"+minute+":"+second;
+								document.getElementById("sp").innerHTML=result;
+								console.log(result);
+							}
+							show();
+							setInterval("show()",1000);
+
+						</script>
+						</div>
+						<div class="captcha">
+							<div class="imgArea">
+								<canvas class="piece"></canvas>
+								<canvas class="missPiece"></canvas>
+							</div>
+							<div class="slider">
+								<div class="track">
+									拖动左边滑块完成上方拼图
+								</div>
+								<div class="button" onmousedown="drag(event)"></div>
+							</div>
+						</div>
+					</div>
+					<div class="clear"></div>
+	        	</div>
+	        </div>
+        </div>
+		<div id="footer-bottom">
+			<div class="bottom-wrapper">
+				<div id="bottom-left">
+					&copy; 2021  软件工程19-4  王欣哲</a>
+				</div>
+				<div id="bottom-right">
+					<ul id="footer-nav">
+						<li><a href="index.html">主页</a></li>
+						<li><a href="gallery.html">风景</a></li>
+						<li><a href="page.html">社会见闻</a>
+						<li><a href="page.html">历史</a></li>
+						<li><a href="page-fullwidth.html">文化</a></li>
+						<li><a href="portfolio.html">野生动物</a></li>
+						<li><a href="blog.html">美食</a></li>
+						<li><a href="contact.html">联系我们</a></li>
+						<li><a href="login.html">登录/注册</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script>
+			let domain = 'captcha/'
+			let tips = "拖动左边滑块完成上方拼图"
+			//拼图是否正确 0 未拖动 1 成功 2 失败
+			let puzzle = 0
+			//滑块x轴数据
+			let slider = {
+				mx: 0,
+				bx: 0
+			}
+			//绘制拼图
+			function drawBlock (ctx, xy = { x: 254, y: 109, r: 9 }, type) {
+				let x = xy.x,
+						y = xy.y,
+						r = xy.r,
+						w = 40;
+				let PI = Math.PI;
+				//绘制
+				ctx.beginPath();
+				//left
+				ctx.moveTo(x, y);
+				//top
+				ctx.arc(x + (w + 5) / 2, y, r, -PI, 0, true);
+				ctx.lineTo(x + w + 5, y);
+				//right\
+				ctx.arc(x + w + 5, y + w / 2, r, 1.5 * PI, 0.5 * PI, false);
+				ctx.lineTo(x + w + 5, y + w);
+				//bottom
+				ctx.arc(x + (w + 5) / 2, y + w, r, 0, PI, false);
+				ctx.lineTo(x, y + w);
+				ctx.arc(x, y + w / 2, r, 0.5 * PI, 1.5 * PI, true);
+				ctx.lineTo(x, y);
+				//修饰，没有会看不出效果
+				ctx.lineWidth = 1;
+				ctx.fillStyle = "rgba(255, 255, 255)";
+				ctx.strokeStyle = "rgba(255, 255, 255)";
+				ctx.stroke();
+				ctx[type]();
+				ctx.globalCompositeOperation = "xor";
+			}
+			function random (min, max) {
+				return Math.floor(Math.random() * (max - min + 1) + min);
+			}
+			function draw (mx = 200, bx = 20, y = 50) {
+				let mainDom = document.querySelector(".missPiece");
+				let bg = mainDom.getContext("2d");
+				let width = mainDom.width;
+				let height = mainDom.height;
+				let blockDom = document.querySelector(".piece");
+				let block = blockDom.getContext("2d");
+				//重新赋值，让canvas进行重新绘制
+				blockDom.height = height;
+				mainDom.height = height;
+				let imgsrc = `${domain}${random(1, 3)}.jpg`
+				let img = document.createElement("img");
+				img.style.objectFit = "scale-down";
+				img.src = imgsrc;
+				img.onload = function () {
+					bg.drawImage(img, 0, 0, width, height);
+					block.drawImage(img, 0, 0, width, height);
+				};
+				let mainxy = { x: mx, y: y, r: 9 };
+				drawBlock(bg, mainxy, "fill");
+				drawBlock(block, mainxy, "clip");
+				blockDom.style.left = bx - mx + 'px'
+			}
+			//拼图验证码初始化
+			function canvasInit () {
+				let mx = random(127, 244),
+						bx = random(10, 128),
+						y = random(10, 99);
+				slider = { mx, bx };
+				draw(mx, bx, y);
+			}
+			function addClass (dom, name) {
+				let classNameStr = dom.className || ''
+				let classNameArray = classNameStr.split(' ')
+				if (classNameArray.indexOf(name) < 0) {
+					classNameArray.push(name)
+				}
+				dom.className = classNameArray.join(' ')
+			}
+			function removeClass (dom, name) {
+				let classNameStr = dom.className || ''
+				let classNameArray = classNameStr.split(' ')
+				if (classNameArray.indexOf(name) >= 0) {
+					classNameArray = classNameArray.filter(function(n) {
+						return name !== n
+					})
+				}
+				dom.className = classNameArray.join(' ')
+			}
+			//鼠标按下
+			function drag (e) {
+				let dom = e.target
+				let piece = document.querySelector(".piece");
+				const downCoordinate = { x: e.x, y: e.y };
+				let checkx = Number(slider.mx) - Number(slider.bx);
+				let x = 0;
+				const move = moveEV => {
+					x = moveEV.x - downCoordinate.x;
+					if (x >= 251 || x <= 0) return false;
+					dom.style.left = x + "px";
+					piece.style.left = x - checkx + "px";
+				};
+				const up = () => {
+					document.removeEventListener("mousemove", move);
+					document.removeEventListener("mouseup", up);
+					dom.style.left = "";
+					let trackDom = document.querySelector('.track')
+					let max = checkx + 10;
+					let min = checkx - 10;
+					if (max >= x && x >= min) {
+						addClass(trackDom, 'pintuTrue');
+						removeClass(trackDom, 'pintuFalse');
+						trackDom.innerText = "验证成功";
+						setTimeout(() => {
+							// 成功之后完成一些操作，例如发送短信，发送邮件，登录等等。
+							refreshCaptha();
+						}, 1000);
+					} else {
+						addClass(trackDom, 'pintuFalse');
+						removeClass(trackDom, 'pintuTrue');
+						trackDom.innerText = "验证失败，请重试";
+						canvasInit();
+					}
+				};
+				document.addEventListener("mousemove", move);
+				document.addEventListener("mouseup", up);
+				e.preventDefault();
+			}
+			function refreshCaptha () {
+				let trackDom = document.querySelector('.track')
+				removeClass(trackDom, 'pintuFalse');
+				removeClass(trackDom, 'pintuTrue');
+				trackDom.innerText = "拖动左边滑块完成上方拼图";
+				canvasInit();
+			}
+			canvasInit();
+		</script>
+
+
+		
+	</body>
+</html>
